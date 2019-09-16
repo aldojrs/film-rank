@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "443c8936-5586-422b-b5a5-3a64cfeca4d2",
+		"name": "film-rank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Filtering Films - All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8182/films?page=0&size=999999999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8182",
+					"path": [
+						"films"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "999999999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtering Films - Pagination Default",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8182/films",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8182",
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtering Films - One Filter and Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8182/films?year=2017&page=0&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8182",
+					"path": [
+						"films"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2017"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Film Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8182/films/1/detail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8182",
+					"path": [
+						"films",
+						"1",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
